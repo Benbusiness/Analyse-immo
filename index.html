@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Analyse Rentabilité Immobilière</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      margin-top: 10px;
+      opacity: 0.85;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .step-title {
+      font-size: 22px;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #22c55e;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      border: 2px solid transparent;
+    }
+
+    .card.active {
+      border-color: #22c55e;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card ul {
+      padding-left: 18px;
+      color: #4b5563;
+    }
+
+    .card button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .green { background: #22c55e; }
+    .blue { background: #3b82f6; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .panel {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .field {
+      margin-bottom: 15px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #374151;
+    }
+
+    .field input, .field select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+    }
+
+    .estimate {
+      margin-bottom: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #f1f5f9;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Analyse Rentabilité Immobilière</h1>
+  <p>Vérifiez si votre projet immobilier est rentable avant de faire une offre</p>
+</header>
+
+<div class="container">
+  <div class="step-title">Étape 1 : Choisissez votre stratégie</div>
+
+  <div class="cards">
+    <div class="card active">
+      <h3>Cash-Flow (Location)</h3>
+      <ul>
+        <li>Calcul du cash-flow mensuel</li>
+        <li>Rendement net annuel</li>
+        <li>Analyse des charges</li>
+      </ul>
+      <button class="green">Analyser la location</button>
+    </div>
+
+    <div class="card">
+      <h3>Achat-Revente</h3>
+      <ul>
+        <li>Projection plus-value</li>
+        <li>Analyse risque / rendement</li>
+        <li>Timing optimal</li>
+      </ul>
+      <button class="blue">Analyser l'achat-revente</button>
+    </div>
+  </div>
+
+  <div class="step-title">Étape 2 : Détails du bien</div>
+
+  <div class="grid">
+    <div class="panel">
+      <div class="field">
+        <label>Ville / Zone</label>
+        <input value="Valserhône">
+      </div>
+      <div class="field">
+        <label>Type de bien</label>
+        <select><option>Appartement</option></select>
+      </div>
+      <div class="field">
+        <label>Surface (m²)</label>
+        <input value="63">
+      </div>
+      <div class="field">
+        <label>Prix d'achat (€)</label>
+        <input value="105000">
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="estimate">Prix moyen au m² : <strong>2 400 €/m²</strong></div>
+      <div class="estimate">Comparatif marché : <strong>-31 %</strong></div>
+      <div class="estimate">Taxe foncière estimée : <strong>756 €/an</strong></div>
+      <div class="estimate">Frais de notaire : <strong>8 400 €</strong></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
